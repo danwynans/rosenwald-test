@@ -1,9 +1,6 @@
 {%- assign image-items = site.data[site.metadata ] | where_exp: "item","item.format contains 'image'" -%}
 {%- assign youtube-items = site.data[site.metadata ] | where_exp: "item","item.youtubeid" -%}
 {%- assign carousel-size = carousel-items | size | at_most: 9 -%}
-<style>
-    #imageCarousel .carousel-item { height: {{ site.data.theme.carousel-height | remove: "px" | default: '300' }} px; }
-</style>
 <div class="card mb-3">
     <div class="card-body">
         <h5 class="card-title">Sample Items</h5>
